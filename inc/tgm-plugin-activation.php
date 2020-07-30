@@ -47,8 +47,8 @@ function hello_elementor_child_register_required_plugins() {
 			'required'  => false,
     ],
     [
-			'name'      => 'Google Analytics for WordPress by MonsterInsights',
-			'slug'      => 'google-analytics-for-wordpress',
+			'name'      => 'Site Kit by Google',
+			'slug'      => 'google-site-kit',
 			'required'  => false,
     ],
     [
