@@ -8,7 +8,12 @@
  */
 
 // Define theme constants
-define('HELLO_ELEMENTOR_CHILD_DIRECTORY', dirname(__FILE__) . '/');
+define( 'HELLO_ELEMENTOR_CHILD_DIRECTORY', dirname(__FILE__) . '/' );
+
+/**
+ * Vendor files
+ */
+require get_stylesheet_directory() . '/vendor/autoload.php';
 
 /**
  * Include the TGM_Plugin_Activation class.
@@ -28,14 +33,14 @@ require_once get_stylesheet_directory() . '/inc/admin.php';
 /**
  * Include theme filters.
  */
-require_once get_stylesheet_directory() . '/inc/filters.php';
+//require_once get_stylesheet_directory() . '/inc/filters.php';
 
 /**
  * Include theme shortcodes.
  */
-require_once get_stylesheet_directory() . '/inc/shortcodes.php';
+//require_once get_stylesheet_directory() . '/inc/shortcodes.php';
 
 /**
  * Include Elementor functionality.
  */
-require_once get_stylesheet_directory() . '/inc/elementor.php';
+//require_once get_stylesheet_directory() . '/inc/elementor.php';
