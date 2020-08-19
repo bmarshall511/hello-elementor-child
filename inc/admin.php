@@ -76,7 +76,7 @@ function hello_elementor_child_validate_options( $input ) {
  * @since 1.0.0
  */
 function hello_elementor_child_admin_init() {
-	register_setting( 'hello_elementor_child', 'hello_elementor_childd', 'hello_elementor_child_validate_options' );
+	register_setting( 'hello_elementor_child', 'hello_elementor_child', 'hello_elementor_child_validate_options' );
 
 	add_settings_section( 'hello_elementor_child_general_settings', __( 'General Settings', 'hello-elementor-child' ), 'hello_elementor_child_general_settings_cb', 'hello-elementor-child' );
 
