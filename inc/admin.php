@@ -49,8 +49,8 @@ function hello_elementor_child_settings_page() {
 		<h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
 		<form action="options.php" method="post">
 		<?php
-		settings_fields( 'hello-elementor-child' );
-		do_settings_sections( 'hello-elementor-child' );
+		settings_fields( 'hello_elementor_child' );
+		do_settings_sections( 'hello_elementor_child' );
 		submit_button( 'Save Settings' );
 		?>
 		</form>
@@ -78,14 +78,14 @@ function hello_elementor_child_validate_options( $input ) {
 function hello_elementor_child_admin_init() {
 	register_setting( 'hello_elementor_child', 'hello_elementor_child', 'hello_elementor_child_validate_options' );
 
-	add_settings_section( 'hello_elementor_child_general_settings', __( 'General Settings', 'hello-elementor-child' ), 'hello_elementor_child_general_settings_cb', 'hello-elementor-child' );
+	add_settings_section( 'hello_elementor_child_general_settings', __( 'General Settings', 'hello-elementor-child' ), 'hello_elementor_child_general_settings_cb', 'hello_elementor_child' );
 
 	// Google Analytics tracking ID.
 	add_settings_field(
 		'ga_tracking_id',
 		__( 'Google Analytics Tracking ID', 'hello-elementor-child' ),
 		'hello_elementor_child_field_cb',
-		'hello-elementor-child',
+		'hello_elementor_child',
 		'hello_elementor_child_general_settings',
 		array(
 			'label_for'   => 'ga_tracking_id',
@@ -101,7 +101,7 @@ function hello_elementor_child_admin_init() {
 		'google_font_url',
 		__( 'Google Fonts URL', 'hello-elementor-child' ),
 		'hello_elementor_child_field_cb',
-		'hello-elementor-child',
+		'hello_elementor_child',
 		'hello_elementor_child_general_settings',
 		array(
 			'label_for'   => 'google_font_url',
