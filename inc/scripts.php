@@ -12,7 +12,7 @@ use MatthiasMullie\Minify;
  * Register & enqueue theme CSS & JS files.
  */
 function hello_elementor_child_scripts() {
-	$options = get_option( 'hello_elementor_child' );
+	$options = get_option( HELLO_ELEMENTOR_CHILD_KEY );
 
 	// Non-critial CSS, loaded on every page.
 	wp_enqueue_style( 'hello-elementor-child-non-critical', get_stylesheet_directory_uri() . '/assets/css/non-critical.css', array(), HELLO_ELEMENTOR_CHILD_VERSION );
@@ -46,7 +46,7 @@ add_action( 'wp_head', 'hello_elementor_child_critical_path_css' );
 add_action(
 	'wp_head',
 	function() {
-		$options = get_option( 'hello_elementor_child' );
+		$options = get_option( HELLO_ELEMENTOR_CHILD_KEY );
 		if ( ! empty( $options['ga_tracking_id'] ) ) :
 			?>
 			<link href="https://www.google-analytics.com" rel="preconnect" crossorigin />
@@ -80,7 +80,7 @@ add_action(
 			return;
 		}
 
-		$options = get_option( 'hello_elementor_child' );
+		$options = get_option( HELLO_ELEMENTOR_CHILD_KEY );
 		if ( ! empty( $options['ga_tracking_id'] ) ) :
 			?>
 			<script>

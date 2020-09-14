@@ -8,6 +8,7 @@
 
 // Define theme constants.
 define( 'HELLO_ELEMENTOR_CHILD_VERSION', '1.0.0' );
+define( 'HELLO_ELEMENTOR_CHILD_KEY', 'hello_elementor_child' );
 define( 'HELLO_ELEMENTOR_CHILD_DIRECTORY', dirname( __FILE__ ) . '/' );
 
 /**
