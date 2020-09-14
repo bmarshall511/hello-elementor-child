@@ -7,7 +7,7 @@
  */
 
 add_action(
-	'plugins_loaded',
+	'init',
 	function() {
 		$options = get_option( HELLO_ELEMENTOR_CHILD_KEY );
 
