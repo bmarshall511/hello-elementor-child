@@ -4,11 +4,11 @@
  *
  * @package HelloElementor
  * @subpackage HelloElementorChild
- * @since 1.0.0
  */
 
-// Define theme constants
-define( 'HELLO_ELEMENTOR_CHILD_DIRECTORY', dirname(__FILE__) . '/' );
+// Define theme constants.
+define( 'HELLO_ELEMENTOR_CHILD_VERSION', '1.0.0' );
+define( 'HELLO_ELEMENTOR_CHILD_DIRECTORY', dirname( __FILE__ ) . '/' );
 
 /**
  * Vendor files
@@ -33,14 +33,4 @@ require_once get_stylesheet_directory() . '/inc/admin.php';
 /**
  * Include theme filters.
  */
-//require_once get_stylesheet_directory() . '/inc/filters.php';
-
-/**
- * Include theme shortcodes.
- */
-//require_once get_stylesheet_directory() . '/inc/shortcodes.php';
-
-/**
- * Include Elementor functionality.
- */
-//require_once get_stylesheet_directory() . '/inc/elementor.php';
+require_once get_stylesheet_directory() . '/inc/filters.php';

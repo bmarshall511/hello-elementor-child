@@ -35,70 +35,60 @@ function hello_elementor_child_register_required_plugins() {
 	 * Array of plugin arrays. Required keys are name and slug.
 	 * If the source is NOT from the .org repo, then source is also required.
 	 */
-	$plugins = [
-		[
-			'name'      => 'Akismet Anti-Spam',
-			'slug'      => 'akismet',
-			'required'  => false,
-    ],
-    [
-			'name'      => 'Wordfence Security – Firewall & Malware Scan',
-			'slug'      => 'wordfence',
-			'required'  => false,
-    ],
-    [
-			'name'      => 'Site Kit by Google',
-			'slug'      => 'google-site-kit',
-			'required'  => false,
-    ],
-    [
-			'name'      => 'Regenerate Thumbnails',
-			'slug'      => 'regenerate-thumbnails',
-			'required'  => false,
-    ],
-    [
-			'name'      => 'Elementor Page Builder',
-			'slug'      => 'elementor',
-			'required'  => false,
-    ],
-    [
-			'name'      => 'Redirection',
-			'slug'      => 'redirection',
-			'required'  => false,
-    ],
-    [
-			'name'      => 'WP Mail SMTP by WPForms',
-			'slug'      => 'wp-mail-smtp',
-			'required'  => false,
-    ],
-    [
-			'name'      => 'WP-Optimize',
-			'slug'      => 'wp-optimize',
-			'required'  => false,
-    ],
-    [
+	$plugins = array(
+		array(
+			'name'     => 'Akismet Anti-Spam',
+			'slug'     => 'akismet',
+			'required' => false,
+		),
+		array(
+			'name'     => 'Wordfence Security – Firewall & Malware Scan',
+			'slug'     => 'wordfence',
+			'required' => false,
+		),
+		array(
+			'name'     => 'Regenerate Thumbnails',
+			'slug'     => 'regenerate-thumbnails',
+			'required' => false,
+		),
+		array(
+			'name'     => 'Elementor Page Builder',
+			'slug'     => 'elementor',
+			'required' => false,
+		),
+		array(
+			'name'     => 'Redirection',
+			'slug'     => 'redirection',
+			'required' => false,
+		),
+		array(
+			'name'     => 'WP Mail SMTP by WPForms',
+			'slug'     => 'wp-mail-smtp',
+			'required' => false,
+		),
+		array(
 			'name'        => 'Advanced Custom Fields',
-      'slug'        => 'advanced-custom-fields',
-      'is_callable' => 'acf',
+			'slug'        => 'advanced-custom-fields',
+			'is_callable' => 'acf',
 			'required'    => true,
-    ],
-    [
-			'name'        => 'WPS Hide Login',
-      'slug'        => 'wps-hide-login',
-			'required'    => false,
-    ],
-		[
+		),
+		array(
+			'name'     => 'WPS Hide Login',
+			'slug'     => 'wps-hide-login',
+			'required' => false,
+		),
+		array(
 			'name'        => 'WordPress SEO by Yoast',
 			'slug'        => 'wordpress-seo',
-      'is_callable' => 'wpseo_init',
-      'required'    => false,
-    ],
-    [
-			'name'        => 'SVG Support',
-      'slug'        => 'svg-support',
+			'is_callable' => 'wpseo_init',
 			'required'    => false,
-    ],
-  ];
+		),
+		array(
+			'name'     => 'SVG Support',
+			'slug'     => 'svg-support',
+			'required' => false,
+		),
+	);
 
 	/*
 	 * Array of configuration settings. Amend each line as needed.
