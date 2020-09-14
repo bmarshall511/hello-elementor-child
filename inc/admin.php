@@ -61,6 +61,23 @@ function hello_elementor_child_admin_init() {
 
 	add_settings_section( 'hello_elementor_child_general_settings', __( 'General Settings', 'hello-elementor-child' ), 'hello_elementor_child_general_settings', 'hello_elementor_child' );
 
+	// Hide page titles.
+	add_settings_field(
+		'hide_title',
+		__( 'Hide Page/Post Titles', 'hello-elementor-child' ),
+		'hello_elementor_child_field_cb',
+		'hello_elementor_child',
+		'hello_elementor_child_general_settings',
+		array(
+			'label_for' => 'hide_title',
+			'type'      => 'checkbox',
+			'desc'      => 'Hide default post and page titles.',
+			'options'   => array(
+				'on' => __( 'Enabled', 'hello-elementor-child' ),
+			),
+		)
+	);
+
 	// Google Analytics tracking ID.
 	add_settings_field(
 		'ga_tracking_id',
@@ -87,9 +104,9 @@ function hello_elementor_child_admin_init() {
 		array(
 			'label_for'   => 'google_font_url',
 			'type'        => 'url',
-			'placeholder' => __( 'e.g. Copy & paste the Google Fonts URL.', 'hello-elementor-child' ),
+			'placeholder' => __( 'https://fonts.googleapis.com/css2?family=XXX&display=swap', 'hello-elementor-child' ),
 			'field_class' => 'regular-text',
-			'desc'        => 'The Google Fonts URL.',
+			'desc'        => __( 'Copy & paste the Google Fonts URL. <strong>Note:</strong> Elementor integrates with Google Fonts. This setting is only needed for advanced theming and optimization.', 'hello-elementor-child' ),
 		)
 	);
 }

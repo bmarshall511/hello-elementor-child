@@ -6,6 +6,13 @@
  * @subpackage HelloElementorChild
  */
 
-//add_filter( 'hello_elementor_enqueue_style', '__return_false' );
-//add_filter( 'hello_elementor_enqueue_theme_style', '__return_false' );
-add_filter( 'hello_elementor_page_title', '__return_false' );
+add_action(
+	'plugins_loaded',
+	function() {
+		$options = get_option( HELLO_ELEMENTOR_CHILD_KEY );
+
+		if ( ! empty( $options['hide_title'] ) && 'on' === $options['hide_title'] ) {
+			add_filter( 'hello_elementor_page_title', '__return_false' );
+		}
+	}
+);
