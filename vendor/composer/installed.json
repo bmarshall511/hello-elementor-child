@@ -1,8 +1,8 @@
 [
     {
         "name": "bmarshall511/gulp_starter",
-        "version": "1.0.0",
-        "version_normalized": "1.0.0.0",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
             "url": "https://github.com/bmarshall511/gulp-starter.git",
@@ -16,7 +16,7 @@
         },
         "time": "2020-09-23T15:15:32+00:00",
         "type": "library",
-        "installation-source": "dist",
+        "installation-source": "source",
         "notification-url": "https://packagist.org/downloads/",
         "license": [
             "GPL-2.0-or-later"

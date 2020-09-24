@@ -31,7 +31,7 @@
 	],
   "require": {
 		"composer/installers": "~1.0",
-		"bmarshall511/gulp_starter": "1.x.x",
+		"bmarshall511/gulp_starter": "dev-master",
 		"oomphinc/composer-installers-extender": "^2"
 	},
   "extra": {
@@ -42,7 +42,7 @@
 	},
   "scripts": {
 		"post-create-project-cmd": [
-			"cd assets; npm install;"
+			"cd assets; npm install; rm -rf .git;"
 		]
 	}
 }
