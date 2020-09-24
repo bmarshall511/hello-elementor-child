@@ -12,11 +12,6 @@ define( 'HELLO_ELEMENTOR_CHILD_KEY', 'hello_elementor_child' );
 define( 'HELLO_ELEMENTOR_CHILD_DIRECTORY', dirname( __FILE__ ) . '/' );
 
 /**
- * Vendor files
- */
-require get_stylesheet_directory() . '/vendor/autoload.php';
-
-/**
  * Include the TGM_Plugin_Activation class.
  */
 require_once get_stylesheet_directory() . '/inc/tgm-plugin-activation.php';
