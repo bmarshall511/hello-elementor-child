@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - "node"
+install:
+  - composer create-project bmarshall511/hello-elementor-child wp-content/themes/hello-elementor-child dev-master
+script:
+  - cd wp-content/themes/hello-elementor-child/assets
+  - npm run build
