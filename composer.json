@@ -1,5 +1,49 @@
 {
-    "require": {
-        "matthiasmullie/minify": "^1.3"
-    }
+  "name": "bmarshall511/hello_elementor_child",
+  "description": "Get a jump start building WordPress themes using Hello Elementor Child, a child theme of Hello Elementor.",
+  "type": "wordpress-theme",
+  "homepage": "https://github.com/bmarshall511/hello-elementor-child",
+  "authors": [
+		{
+			"name": "Ben Marshall (bmarshall)",
+			"homepage": "https://www.drupal.org/u/bmarshall",
+			"role": "Maintainer"
+		}
+  ],
+  "support": {
+		"issues": "https://github.com/bmarshall511/hello-elementor-child/issues"
+  },
+  "license": "GPL-2.0-or-later",
+  "minimum-stability": "dev",
+  "repositories": [
+		{
+			"type": "package",
+			"package": {
+				"name": "bmarshall511/hello-elementor-child",
+				"version": "master",
+				"source": {
+					"url": "git://github.com/bmarshall511/hello-elementor-child.git",
+					"type": "git",
+					"reference": "master"
+				}
+			}
+		}
+	],
+  "require": {
+    "composer/installers": "~1.0",
+		"bmarshall511/gulp_starter": "dev-master",
+		"oomphinc/composer-installers-extender": "dev-master",
+    "matthiasmullie/minify": "^1.3"
+  },
+  "extra": {
+		"installer-types": ["library"],
+		"installer-paths": {
+			"assets/": ["bmarshall511/gulp_starter"]
+		}
+  },
+  "scripts": {
+		"post-create-project-cmd": [
+			"cd assets; npm install; rm -rf .git;"
+		]
+	}
 }
