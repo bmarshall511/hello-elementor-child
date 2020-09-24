@@ -249,12 +249,12 @@ add_filter( 'login_headerurl', 'hello_elementor_child_logo_url' );
 function hello_elementor_child_logo_url_title() {
 	return get_bloginfo( 'name' );
 }
-add_filter( 'login_headertitle', 'hello_elementor_child_logo_url_title' );
+add_filter( 'login_headertext', 'hello_elementor_child_logo_url_title' );
 
 /**
  * Enqueue admin & login scripts.
  */
 function hello_elementor_child_login_scripts() {
-	wp_enqueue_style( 'hello-elementor-child-login', get_stylesheet_directory_uri() . '/assets/css/add-ons/wordpress/login.css', array(), HELLO_ELEMENTOR_CHILD_VERSION );
+	//wp_enqueue_style( 'hello-elementor-child-login', get_stylesheet_directory_uri() . '/assets/css/pages/wordpress-login.css', array(), HELLO_ELEMENTOR_CHILD_VERSION );
 }
 add_action( 'login_enqueue_scripts', 'hello_elementor_child_login_scripts' );
