@@ -30,19 +30,19 @@
 		}
 	],
   "require": {
-    "composer/installers": "~1.0",
-		"bmarshall511/gulp_starter": "dev-master",
+		"composer/installers": "~1.0",
+		"bmarshall511/gulp_starter": "1.x.x",
 		"oomphinc/composer-installers-extender": "^2"
-  },
+	},
   "extra": {
 		"installer-types": ["library"],
 		"installer-paths": {
 			"assets/": ["bmarshall511/gulp_starter"]
 		}
-  },
+	},
   "scripts": {
 		"post-create-project-cmd": [
-			"cd assets; npm install; rm -rf .git;"
+			"cd assets; npm install;"
 		]
 	}
 }
