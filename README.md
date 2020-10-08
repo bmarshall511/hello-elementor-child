@@ -8,7 +8,7 @@
 
 In the WordPress project root, run:
 ```
-composer create-project bmarshall511/hello-elementor-child wp-content/themes/hello-elementor-child dev-master
+composer create-project bmarshall511/hello_elementor_child wp-content/themes/hello-elementor-child dev-master
 ```
 
 ### Manual Install
