@@ -8,6 +8,3 @@ php_errorlog
 # Development #
 ######################
 .DS_Store*
-wp-config-local.php
-sync.sh
-ssh.sh
