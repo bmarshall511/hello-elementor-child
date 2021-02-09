@@ -189,6 +189,20 @@ function hello_elementor_child_field_cb( $args ) {
 			/>
 			<?php
 			break;
+		case 'textarea':
+			?>
+			<textarea
+				id="<?php echo esc_attr( $args['label_for'] ); ?>"
+				name="<?php echo esc_attr( $name ); ?>"
+				<?php if ( ! empty( $args['placeholder'] ) ) : ?>
+					placeholder="<?php echo esc_attr( $args['placeholder'] ); ?>"
+				<?php endif; ?>
+				<?php if ( ! empty( $args['field_class'] ) ) : ?>
+					class="<?php echo esc_attr( $args['field_class'] ); ?>"
+				<?php endif; ?>
+			><?php echo esc_attr( $value ); ?></textarea>
+			<?php
+			break;
 	}
 
 	if ( ! empty( $args['suffix'] ) ) {
